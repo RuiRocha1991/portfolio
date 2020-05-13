@@ -1,6 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import data from '../src/data/data.json'
-import './App.css';
+
+import AboutMe from './components/about-me'
+import Skills from './components/skills/index'
+
+// Importing CSS
+import 'normalize.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.css'
+
 
 class App extends Component {
   constructor() {
@@ -10,10 +18,10 @@ class App extends Component {
 }
 
   render () {
-    console.log('render')
     return (
       <div>
-        {this.state.personalInfo && this.state.personalInfo.name}
+        <AboutMe />
+        <Skills />
       </div>
     )
   }
@@ -23,4 +31,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App

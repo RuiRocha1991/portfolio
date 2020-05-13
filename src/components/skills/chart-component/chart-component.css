@@ -1,0 +1,44 @@
+:root {
+  --main-font-size-title: 18px;
+  --main-color-title: #c2c0c3;
+  --main-color-value: #ffffff;
+  --main-font-size-value:24px;
+  --main-pie-chart-size: 160px;
+}
+
+
+.pie-chart-container {
+  background-color: #313131;
+  padding: 8px;
+  margin: 8px;
+}
+
+.pie-chart {
+  width: var(--main-pie-chart-size);
+  height: var(--main-pie-chart-size);
+  margin: auto;
+  position: relative;
+}
+
+.pie-chart-title {
+  color: var(--main-color-title);
+  font-size: var(--main-font-size-title);
+  margin-top: 16px;
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: .3px;
+
+}
+
+.pie-chart-value {
+  width: var(--main-pie-chart-size);
+  height: var(--main-pie-chart-size);
+  color: var(--main-color-value);
+  line-height: var(--main-pie-chart-size);
+  font-size: var(--main-font-size-value);
+  text-align: center;
+  position: absolute;
+  margin: 0 auto;
+  font-weight: 600;
+}
+
