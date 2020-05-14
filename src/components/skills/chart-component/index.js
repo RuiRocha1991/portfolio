@@ -5,14 +5,13 @@ import {PieChart} from 'react-minimal-pie-chart'
 import './chart-component.css'
 
 const ChartComponent = ({value, title, color}) => {
-  const val = value !== 0 ? value : 100 
   return (
     <div className='pie-chart-container'>
       <div className="pie-chart">
       <span className='pie-chart-value'>{value}%</span>
         <PieChart 
           data={[
-            { title, value:val , color }
+            { title, value , color }
           ]}
           lineWidth={5}
           startAngle={-90}

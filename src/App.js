@@ -3,6 +3,7 @@ import data from '../src/data/data.json'
 
 import AboutMe from './components/about-me'
 import Skills from './components/skills/index'
+import { Container, Row, Col } from 'reactstrap'
 
 // Importing CSS
 import 'normalize.css'

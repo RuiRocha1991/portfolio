@@ -1,30 +1,62 @@
+import { addParameters, storiesOf } from '@storybook/react'
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+
 import React from 'react';
 
 import Skill from './index'
 
-export default { title: 'Skill' };
+import 'normalize.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const array = [
-  {value: 90, title: 'html', color: '#DCA52E'}, 
-  {value: 80, title: 'css', color: '#DCA52E'}, 
-  {value: 50, title: 'java', color: '#DCA52E'},
-  {value: 88, title: 'jquery', color: '#DCA52E'},
-  {value: 75, title: 'react', color: '#DCA52E'},
-  {value: 67, title: 'typescript', color: '#DCA52E'},
-  {value: 100, title: 'javascript', color: '#DCA52E'},
-  {value: 30, title: 'node', color: '#DCA52E'}
+  {value: 90, title: 'html'}, 
+  {value: 80, title: 'css'}, 
+  {value: 50, title: 'java'},
+  {value: 88, title: 'jquery'},
+  {value: 74, title: 'Jira'}
 ]
-
-export const skill = () => <Skill skills={array}/>
 
 const array2 = [
   {value: 90, title: 'html'}, 
   {value: 80, title: 'css'}, 
   {value: 50, title: 'java'},
   {value: 88, title: 'jquery'},
-  {value: 75, title: 'react'},
-  {value: 67, title: 'typescript'},
-  {value: 100, title: 'javascript'},
-  {value: 30}
+  {value: 74, title: 'Jira' }
 ]
-export const skillWithoutPropColor = () => <Skill skills={array2}/>
+
+const array3 = [
+  {value: 90}, 
+  {value: 80}, 
+  {value: 50},
+  {value: 88},
+  {value: 74}
+]
+
+const array4 = [
+  {title: 'html'}, 
+  { title: 'css'}, 
+  { title: 'java'},
+  { title: 'jquery'},
+  { title: 'Jira' }
+]
+const customViewports = {
+  desktopFullHD: {
+    name: 'Desktop Full HD',
+    styles: {
+      width: '100%',
+      height: '100%',
+    },
+  }
+};
+addParameters({
+  viewport: {
+    viewports: {...INITIAL_VIEWPORTS, ...customViewports}
+  },
+});
+
+storiesOf('Skills', module)
+  .add('skill with all props', () => <Skill skills={array} color='#DCA52E'/>)
+  .add('skill without prop color', () => <Skill skills={array2} />)
+  .add('Skills without prop title', () => <Skill skills={array3} color='#DCA52E'/>)
+  .add('Skills without prop value', () => <Skill skills={array4} color='#DCA52E'/>)
+  .add('Skills without props', () => <Skill skills={[{}]}/>)

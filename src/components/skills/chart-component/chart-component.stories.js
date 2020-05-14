@@ -1,9 +1,30 @@
+import { addParameters, storiesOf } from '@storybook/react'
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+
 import React from 'react';
 
 import ChartComponent from './index'
 
-export default { title: 'Chart Component' };
+const customViewports = {
+  desktopFullHD: {
+    name: 'Desktop Full HD',
+    styles: {
+      width: '100%',
+      height: '100%',
+    },
+  }
+};
+addParameters({
+  viewport: {
+    viewports: {...INITIAL_VIEWPORTS, ...customViewports}
+  },
+});
 
-export const ChartComponentWithoutProps = () => <ChartComponent />
 
-export const ChartComponentWithProps = () => <ChartComponent value={90} title='html' color='#DCA52E'/>
+storiesOf('Chart', module)
+  .add('Chart with all props', () => <ChartComponent value={90} title='html' color='#DCA52E'/>)
+  .add('Chart without prop color', () => <ChartComponent value={90} title='html'  />)
+  .add('Chart without prop title', () => <ChartComponent value={90}  color='#DCA52E'/>)
+  .add('Chart without prop value', () => <ChartComponent title='html' color='#DCA52E'/>)
+  .add('Chart without props', () => <ChartComponent />)
+
