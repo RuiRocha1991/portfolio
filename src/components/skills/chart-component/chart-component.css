@@ -1,17 +1,37 @@
 :root {
   --main-font-size-title: 18px;
-  --main-color-title: #c2c0c3;
-  --main-color-value: #ffffff;
+  --main-color-title: #a0a0a0;
+  --main-color-value: #000000;
   --main-font-size-value:24px;
   --main-pie-chart-size: 140px;
 }
 
 
 .pie-chart-container {
-  background-color: #292929;
+  background-color: #ffffff;
   padding: 8px;
   margin: 8px;
+  border: 1px solid #BEB7A4;
+  animation-name: shadowDown;
+  animation-duration: .5s;
 }
+
+.pie-chart-container:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+  animation-name: shadowUp;
+  animation-duration: .5s;
+}
+
+@keyframes shadowUp {
+  from {box-shadow: 0 0 10px rgba(0, 0, 0, 0);}
+  to {box-shadow: 0 0 10px rgba(0, 0, 0, .6);}
+}
+
+@keyframes shadowDown {
+  from {box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);}
+  to {box-shadow: 0 0 10px rgba(0, 0, 0, 0);}
+}
+
 
 .pie-chart {
   width: var(--main-pie-chart-size);

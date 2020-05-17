@@ -1,0 +1,110 @@
+.resume-item-container {
+  padding-left: 48px;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  margin: 0;
+  border-left: 3px solid #989898;
+}
+
+.resume-item:before {
+  position: absolute;
+  top: 18px;
+  left: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-right: 15px solid #BEB7A4;
+  border-left: 0 solid #BEB7A4;
+  border-bottom: 15px solid transparent;
+  content: " ";
+}
+
+.resume-item:after {
+  position: absolute;
+  top: 19px;
+  left: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-right: 14px solid #fff;
+  border-left: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  content: " ";
+}
+
+.resume-item {
+  position: relative;
+  background: rgba(255,255,255);
+  border: 1px solid #BEB7A4;
+}
+
+.resume-item:hover{
+  box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+}
+
+.resume-item-icon-container-experience {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border: 1px solid #295ECF;
+  top: 16px;
+  left: -70px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 30px;
+  background-color: #3A86FF;
+}
+
+.resume-item-icon-container-graduation {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border: 1px solid #FF7A2F;
+  top: 16px;
+  left: -70px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 30px;
+  background-color: #FF6B00;
+}
+
+.resume-item-icon {
+ color: #fff;
+}
+
+
+.resume-item .resume-date {
+  color: #000000;
+  padding: 14px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  border-bottom: 1px solid #3a3838;
+}
+
+.resume-item h4 {
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #000;
+  padding: 14px 20px 8px;
+  border-top: 1px solid #2a2a2b;
+}
+
+.resume-item span {
+  display: block;
+  letter-spacing: .7px;
+  color: #000000;
+  font-size: 13px;
+  margin: 0 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #2a2a2b;
+}
+
+.resume-item p {
+  line-height: 1.8;
+  margin-bottom: 0;
+  font-weight: 400;
+  color: #5F5F5F;
+  margin: 0 20px;
+  padding-top: 10px;
+  border-top: 1px solid #3a3838;
+}

@@ -10,10 +10,12 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 const array = [
   {value: 90, title: 'html'}, 
-  {value: 80, title: 'css'}, 
+  {value: 71, title: 'css'}, 
   {value: 50, title: 'java'},
   {value: 88, title: 'jquery'},
-  {value: 74, title: 'Jira'}
+  {value: 56, title: 'Jira'},
+  {value: 74, title: 'Jira'},
+  {value: 88, title: 'jquery'},
 ]
 
 const array2 = [
@@ -55,8 +57,8 @@ addParameters({
 });
 
 storiesOf('Skills', module)
-  .add('skill with all props', () => <Skill skills={array} color='#DCA52E'/>)
+  .add('skill with all props', () => <Skill skills={array} color='#FFD700'/>)
   .add('skill without prop color', () => <Skill skills={array2} />)
-  .add('Skills without prop title', () => <Skill skills={array3} color='#DCA52E'/>)
-  .add('Skills without prop value', () => <Skill skills={array4} color='#DCA52E'/>)
+  .add('Skills without prop title', () => <Skill skills={array3} color='#FFD700'/>)
+  .add('Skills without prop value', () => <Skill skills={array4} color='#FFD700'/>)
   .add('Skills without props', () => <Skill skills={[{}]}/>)

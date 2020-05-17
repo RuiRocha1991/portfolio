@@ -13,7 +13,7 @@ const ChartComponent = ({value, title, color}) => {
           data={[
             { title, value , color }
           ]}
-          lineWidth={3}
+          lineWidth={4}
           startAngle={-90}
           totalValue={100}
           animate={true}

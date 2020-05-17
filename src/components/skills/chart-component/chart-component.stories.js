@@ -22,9 +22,9 @@ addParameters({
 
 
 storiesOf('Chart', module)
-  .add('Chart with all props', () => <ChartComponent value={90} title='html' color='#DCA52E'/>)
+  .add('Chart with all props', () => <ChartComponent value={90} title='html' color='#FFD700'/>)
   .add('Chart without prop color', () => <ChartComponent value={90} title='html'  />)
-  .add('Chart without prop title', () => <ChartComponent value={90}  color='#DCA52E'/>)
-  .add('Chart without prop value', () => <ChartComponent title='html' color='#DCA52E'/>)
+  .add('Chart without prop title', () => <ChartComponent value={90}  color='#FFD700'/>)
+  .add('Chart without prop value', () => <ChartComponent title='html' color='#FFD700'/>)
   .add('Chart without props', () => <ChartComponent />)
 
