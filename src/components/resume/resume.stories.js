@@ -40,7 +40,15 @@ const array = [{
   affiliations: "Freelancer",
   resume: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusm tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
   isGraduation:false
-}]
+},{
+  title: "Full-stack developer",
+  startDate: "2010",
+  endDate: "2013",
+  affiliations: "Freelancer",
+  resume: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusm tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+  isGraduation:false
+}
+]
 
 storiesOf('Resume', module)
   .add('skill with all props', () => <Resume resumeList={array}/>)

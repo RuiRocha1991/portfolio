@@ -1,0 +1,44 @@
+.resume-container {
+  padding-top: 100px !important;
+  padding-bottom: 70px !important;
+}
+
+.resume-container-title {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.resume-container-title h2 {
+  display: inline-block;
+  position: relative;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 28px;
+  letter-spacing: .7px;
+  line-height: 1;
+  margin: 0;
+  padding-bottom: 15px;
+}
+
+.resume-container-title h2::before,
+.resume-container-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 20%;
+  height: 1px;
+  background: #000;  
+}
+
+.resume-container-title h2::before {
+  left: 22%;
+}
+
+.resume-container-title h2::after {
+  left: 60%;
+}
+
+.resume-container-title h2 span {
+  background: #292929;
+}
