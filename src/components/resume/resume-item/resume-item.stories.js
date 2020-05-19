@@ -3,7 +3,7 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 
 import React from 'react';
 
-import ResumeItem from './index'
+import ResumeItem from '.'
 
 import 'normalize.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -28,7 +28,7 @@ addParameters({
 
 
 storiesOf('Resume item', module)
-  .add('skill with all props', () => <div style={{'margin': '30px'}}> 
+  .add('resume with all props and isGraduation=true', () => <div style={{'margin': '30px'}}> 
     <ResumeItem 
       title={"Computer Science"}
       startDate={"2007"}
@@ -37,5 +37,20 @@ storiesOf('Resume item', module)
       resume={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusm tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor sit amet, consectetur adipisicing elit."}
       isGraduation={true}
       />
+    </div>
+    )
+    .add('resume with all props and isGraduation=false', () => <div style={{'margin': '30px'}}> 
+    <ResumeItem 
+      title={"Full-stack developer"}
+      startDate={"2007"}
+      endDate={"2011"}
+      affiliations={"Freelancer"}
+      resume={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusm tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor sit amet, consectetur adipisicing elit."}
+      isGraduation={false}
+      />
+    </div>
+    )
+    .add('resume withput props', () => <div style={{'margin': '30px'}}> 
+    <ResumeItem />
     </div>
     )

@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCogs } from '@fortawesome/free-solid-svg-icons'
 
-import ResumeItem from './resume-item'
+import ResumeItem from './resume-item/'
 import './resume.css'
 
 const Resume = ({resumeList}) => {
@@ -24,11 +24,11 @@ const Resume = ({resumeList}) => {
 }
 
 Resume.defaultProps = {
-  skills: [],
+  resumeList: [],
 }
 
 Resume.protoTypes = {
- skills: PropTypes.array.isRequired,
+  resumeList: PropTypes.array.isRequired,
 }
 
 export default Resume

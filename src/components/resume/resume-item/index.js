@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGraduationCap, faSuitcase } from '@fortawesome/free-solid-svg-icons'
@@ -21,6 +22,24 @@ const ResumeItem = ({title, startDate, endDate, affiliations, resume, isGraduati
       </div>
     </div>
   )
+}
+
+ResumeItem.defaultProps = {
+  title: 'N/A',
+  startDate: 0,
+  endDate: 0,
+  affiliations: 'N/A',
+  resume: 'N/A',
+  isGraduation: false,
+}
+
+ResumeItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  startDate: PropTypes.number.isRequired,
+  endDate: PropTypes.number.isRequired,
+  affiliations: PropTypes.string.isRequired,
+  resume: PropTypes.string.isRequired,
+  isGraduation: PropTypes.bool.isRequired,
 }
 
 export default ResumeItem
